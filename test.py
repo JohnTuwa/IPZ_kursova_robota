@@ -34,7 +34,7 @@ class TestTaskmanager(unittest.TestCase):
         proj1 = TaskManager(1234, 'not_exists', '')
         proj2 = TaskManager(1234, 'already_exists', '')
 
-        self.assertEqual(proj1.task_list(), '')
+        self.assertEqual(proj1.task_list(), False)
         self.assertEqual(proj2.task_list(), ['i am a line', 'will be done'])
 
     def test_add_task(self):
